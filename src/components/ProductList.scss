@@ -1,0 +1,145 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.form-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+
+  h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+
+  .form-list {
+    width: 100%;
+
+    ul {
+      overflow-y: auto;
+      list-style: none;
+      height: 57vh;
+      padding: 0;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-top: 1px solid black;
+        color: #13212a;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        span {
+          flex: 1;
+        }
+
+        .strikethrough {
+          text-decoration: line-through;
+          color: #878787;
+
+          & + .hide__button {
+            background-color: #8d8384;
+          }
+        }
+
+        .hide__button {
+          background-color: #be213c;
+          margin: 0 10px;
+        }
+
+        .delete__button {
+          background-color: #be213c;
+        }
+      }
+    }
+  }
+
+  .buttons__block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+
+    form {
+      flex: 1;
+      width: 100%;
+
+      input[type="text"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-right: 5px;
+        width: 50%;
+      }
+
+      button {
+        background-color: #4993c0;
+      }
+    }
+
+    .delete__button {
+      background-color: #be213c;
+    }
+  }
+}
+
+@media (min-width: 560px) and (max-width: 892px) { 
+    body {
+      #app {
+        .buttons__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                input {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+
+                button {
+                    margin-bottom: 20px;
+                    width: 30%;
+                    padding: 10px;
+                }
+            }
+
+
+            .delete__button {
+                width: 20%;
+                padding: 10px;
+
+            }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 560px) { 
+    body {
+      #app {
+        padding: 0;
+  
+        .form-cover {
+          margin: 0 20px;
+          height: 100%;
+        }
+      }
+    }
+  }

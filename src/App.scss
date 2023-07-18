@@ -1,0 +1,58 @@
+
+body {
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #527487;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  #app {
+    background: url(./assets/paper-cell.jpg);
+    padding: 20px;
+    border-radius: 25px;
+    width: 1040px;
+    margin: 50px 0;
+    height: 80vh;
+
+    button {
+      padding: 5px 10px;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 892px) and (max-width: 1080px) { 
+  body {
+    #app {
+      margin: 50px 100px;
+    }
+  }
+}
+
+@media (min-width: 560px) and (max-width: 892px) { 
+  body {
+    #app {
+      margin: 50px 0;
+      border-radius: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 560px) { 
+  body {
+    #app {
+      padding: 0;
+      border-radius: 0;
+      height: 100vh;
+
+      .form-cover {
+        margin: 0 20px;
+      }
+    }
+  }
+}
